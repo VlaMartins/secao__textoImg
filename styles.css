@@ -1,0 +1,58 @@
+/* Reset de margens e paddings para evitar espaços indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+/* Estilizando a seção principal */
+.secao {
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção na página */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a seção */
+    border-radius: 8px;
+
+    display: flex; /*flexbox para organizar os itens lado a lado */
+   
+    background-color: #fff;
+    padding: 20px;
+}
+
+.texto {
+    flex: 1; /* Ocupa o espaço restante */
+    padding-right: 20px; /* Espaçamento à direita para separar da imagem */
+}
+
+.texto p{
+    line-height: 2em;
+}
+
+.imagem {
+    flex: 1; /* Ocupa o espaço restante */
+    text-align: center; /* Centraliza a imagem horizontalmente */
+}
+
+.imagem img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada para a imagem */
+}
+
+/* Media query para tornar a seção responsiva */
+@media (max-width: 800px) {
+    .secao {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+    }
+    .texto, .imagem {
+        padding: 10px; /* Espaçamento interno menor para telas menores */
+    }
+}
